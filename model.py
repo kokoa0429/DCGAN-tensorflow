@@ -309,6 +309,9 @@ class DCGAN(object):
             )
             #save_images(samples, image_manifold_size(samples.shape[0]),
             #      './{}/train_{:08d}.png'.format(config.sample_dir, counter))
+
+            if not os.path.exists('../drive/My drive/out/{}'.format(config.sample_dir)):
+              os.makedirs('../drive/My drive/out/{}'.format(config.sample_dir))
             save_images(samples, image_manifold_size(samples.shape[0]),
                   '../drive/My drive/out/{}/train_{:08d}.png'.format(config.sample_dir, counter))
             print("[Sample] d_loss: %.8f, g_loss: %.8f" % (d_loss, g_loss)) 
