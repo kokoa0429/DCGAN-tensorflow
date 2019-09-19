@@ -16,7 +16,7 @@ from time import gmtime, strftime
 from six.moves import xrange
 from PIL import Image
 
-import tensorflow as tf
+import tensorflow as tffromarray
 import tensorflow.contrib.slim as slim
 
 pp = pprint.PrettyPrinter()
