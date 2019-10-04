@@ -91,7 +91,7 @@ def center_crop(x, crop_h, crop_w,
   h, w = x.shape[:2]
   j = int(round((h - crop_h)/2.))
   i = int(round((w - crop_w)/2.))
-  im = Image.fromarray(x[j:j+crop_h, i:i+crop_w])
+  im = Image.fromarray(np.uint8(np.asarray(x[j:j+crop_h, i:i+crop_w])))
   return np.array(im.resize([resize_h, resize_w]), PIL.Image.BILINEAR)
 
 def transform(image, input_height, input_width, 
